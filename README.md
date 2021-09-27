@@ -1,9 +1,9 @@
 # Lifecell SMS Integration
 
-[![Latest Stable Version](https://poser.pugx.org/wearesho-team/lifecell-message-delivery/v/stable.png)](https://packagist.org/packages/wearesho-team/alphasms-message-delivery)
-[![Total Downloads](https://poser.pugx.org/wearesho-team/lifecell-message-delivery/downloads.png)](https://packagist.org/packages/wearesho-team/alphasms-message-delivery)
-[![Build Status](https://travis-ci.org/wearesho-team/lifecell-message-delivery.svg?branch=master)](https://travis-ci.org/wearesho-team/alphasms-message-delivery)
-[![codecov](https://codecov.io/gh/wearesho-team/lifecell-message-delivery/branch/master/graph/badge.svg)](https://codecov.io/gh/wearesho-team/alphasms-message-delivery)
+[![Latest Stable Version](https://poser.pugx.org/wearesho-team/lifecell-message-delivery/v/stable.png)](https://packagist.org/packages/wearesho-team/lifecell-message-delivery)
+[![Total Downloads](https://poser.pugx.org/wearesho-team/lifecell-message-delivery/downloads.png)](https://packagist.org/packages/wearesho-team/lifecell-message-delivery)
+[![Build Status](https://travis-ci.org/wearesho-team/lifecell-message-delivery.svg?branch=master)](https://travis-ci.org/wearesho-team/lifecell-message-delivery)
+[![codecov](https://codecov.io/gh/wearesho-team/lifecell-message-delivery/branch/master/graph/badge.svg)](https://codecov.io/gh/wearesho-team/lifecell-message-delivery)
 
 [wearesho-team/message-delivery](https://github.com/wearesho-team/message-delivery) implementation of
 [Delivery\ServiceInterface](https://github.com/wearesho-team/message-delivery/blob/1.3.4/src/ServiceInterface.php)

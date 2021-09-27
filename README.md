@@ -1,4 +1,4 @@
-# AlphaSMS Integration
+# Lifecell SMS Integration
 
 [![Latest Stable Version](https://poser.pugx.org/wearesho-team/lifecell-message-delivery/v/stable.png)](https://packagist.org/packages/wearesho-team/alphasms-message-delivery)
 [![Total Downloads](https://poser.pugx.org/wearesho-team/lifecell-message-delivery/downloads.png)](https://packagist.org/packages/wearesho-team/alphasms-message-delivery)

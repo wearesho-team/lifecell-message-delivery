@@ -64,15 +64,13 @@ class Service implements Delivery\ServiceInterface
     protected function formRequest(array $body): GuzzleHttp\Psr7\Request
     {
         return new GuzzleHttp\Psr7\Request(
-            'GET',
+            'POST',
             static::BASE_URI,
             [
-                GuzzleHttp\RequestOptions::HEADERS => [
-                    'Authorization' => 'Basic ' . $this->config->getAuth(),
-                    'Content-Type' => 'application/json',
-                ],
-                GuzzleHttp\RequestOptions::JSON => json_encode($body)
-            ]
+                'Authorization' => 'Basic ' . $this->config->getAuth(),
+                'Content-Type' => 'application/json',
+            ],
+            json_encode($body),
         );
     }
 

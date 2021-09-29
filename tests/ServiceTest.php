@@ -58,14 +58,16 @@ class ServiceTest extends TestCase
             new GuzzleHttp\Psr7\Response(
                 200,
                 [],
-                json_encode([
-                                "state" => [
-                                    "value" => "Accepted"
-                                ],
-                                "id" => "6614012446421",
-                                "date" => "Tue, 20 Nov 2018 08:55:46 +0200",
-                                "execTime" => "40"
-                            ])
+                json_encode(
+                    [
+                        "state" => [
+                            "value" => "Accepted"
+                        ],
+                        "id" => "6614012446421",
+                        "date" => "Tue, 20 Nov 2018 08:55:46 +0200",
+                        "execTime" => "40"
+                    ]
+                )
             )
         );
         $message = new Delivery\Message('Some Text', '380000000000');
@@ -90,7 +92,7 @@ class ServiceTest extends TestCase
                     "value" => 'Some Text'
                 ],
             ],
-            json_decode($request->getHeaders()['json'][0], true)
+            json_decode($request->getBody()->getContents(), true)
         );
     }
 
@@ -111,21 +113,15 @@ class ServiceTest extends TestCase
         $this->service->send(new Delivery\Message('content', '380000000000'));
     }
 
-    /**
-     * @expectedException \Wearesho\Delivery\Exception
-     * @expectedExceptionMessage Unsupported recipient format
-     */
     public function testInvalidRecipient(): void
     {
+        $this->expectExceptionMessage("Unsupported recipient format");
+        $this->expectException(\Wearesho\Delivery\Exception::class);
         $message = new Delivery\Message("Text", "123");
         /** @noinspection PhpUnhandledExceptionInspection */
         $this->service->send($message);
     }
 
-//    protected function mockFailedResponse(int $code): GuzzleHttp\Psr7\Response
-//    {
-//        return $this->mockResponse("<error>$code</error>");
-//    }
 
     protected function mockResponse(string $content): GuzzleHttp\Psr7\Response
     {

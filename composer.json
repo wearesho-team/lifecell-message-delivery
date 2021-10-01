@@ -1,6 +1,6 @@
 {
-  "name": "wearesho-team/alphasms-message-delivery",
-  "description": "Message Delivery AlphaSMS integration",
+  "name": "wearesho-team/lifecell-message-delivery",
+  "description": "Message Delivery Lifecell integration",
   "type": "library",
   "license": "MIT",
   "minimum-stability": "stable",

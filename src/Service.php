@@ -42,10 +42,10 @@ class Service implements Delivery\ServiceInterface
             : $this->config->getSenderName();
         $requestObject = [
             "id" => "single",
-            "validity" => "+30 min", // qwe
+            "validity" => "+30 min",
             "extended" => true,
             "source" => $sender,
-            "desc" => "sms", // qwe
+            "desc" => "sms",
             "type" => "SMS",
             "to" => [
                 ["msisdn" => $message->getRecipient()]
